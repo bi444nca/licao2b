@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cadastro</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #2C2F33;
+            color: #FFF;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+
+        .form-container {
+            width: 300px;
+            background-color: #23272A;
+            padding: 20px;
+            border-radius: 8px;
+        }
+
+        .form-container h2 {
+            margin-bottom: 20px;
+        }
+
+        .form-container input {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 10px;
+            border-radius: 4px;
+            border: none;
+        }
+
+        .form-container button {
+            width: 100%;
+            padding: 10px;
+            background-color: #43B581;
+            border: none;
+            border-radius: 4px;
+            color: #FFF;
+            cursor: pointer;
+        }
+
+        .form-container button:hover {
+            background-color: #36a05b;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="form-container">
+        <h2>Cadastro</h2>
+        <input type="text" id="nome" placeholder="Nome" required>
+        <input type="text" id="cpf" placeholder="CPF" required>
+        <input type="email" id="email" placeholder="E-mail" required>
+        <input type="tel" id="telefone" placeholder="Telefone" required>
+        <input type="text" id="endereco" placeholder="Endereço" required>
+        <button onclick="enviarDados()">Enviar</button>
+    </div>
+
+    <script>
+        function enviarDados() {
+            const nome = document.getElementById('nome').value;
+            const cpf = document.getElementById('cpf').value;
+            const email = document.getElementById('email').value;
+            const telefone = document.getElementById('telefone').value;
+            const endereco = document.getElementById('endereco').value;
+
+            // Cria um objeto com os dados do usuário
+            const usuario = {
+                nome,
+                cpf,
+                email,
+                telefone,
+                endereco
+            };
+
+            // Salva os dados no localStorage
+            localStorage.setItem('usuario', JSON.stringify(usuario));
+
+            alert('Cadastro realizado com sucesso!');
+            
+            // Limpa os campos do formulário após o envio
+            document.getElementById('nome').value = '';
+            document.getElementById('cpf').value = '';
+            document.getElementById('email').value = '';
+            document.getElementById('telefone').value = '';
+            document.getElementById('endereco').value = '';
+        }
+    </script>
+
+</body>
+</html>
