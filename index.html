@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Página Discord Menu</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #2C2F33;
+            color: #FFF;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+
+        .sidebar {
+            width: 300px;
+            background-color: #23272A;
+            padding: 20px;
+            border-radius: 8px;
+        }
+
+        .profile-section {
+            display: flex;
+            align-items: center;
+            margin-bottom: 20px;
+        }
+
+        .avatar {
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            margin-right: 10px;
+        }
+
+        .username {
+            flex-grow: 1;
+        }
+
+        .username span {
+            display: block;
+        }
+
+        .tag {
+            font-size: 0.8em;
+            color: #B9BBBE;
+        }
+
+        .status-icons {
+            display: flex;
+            align-items: center;
+        }
+
+        .status-dot {
+            width: 10px;
+            height: 10px;
+            background-color: #43B581;
+            border-radius: 50%;
+            margin-right: 5px;
+        }
+
+        .settings-icon {
+            font-size: 1.2em;
+        }
+
+        .menu {
+            margin-bottom: 20px;
+        }
+
+        .menu a {
+            display: block;
+            color: #B9BBBE;
+            padding: 10px 0;
+            text-decoration: none;
+            transition: color 0.3s;
+        }
+
+        .menu a:hover {
+            color: #FFF;
+        }
+
+        .footer {
+            border-top: 1px solid #40444B;
+            padding-top: 10px;
+        }
+
+        .footer a {
+            color: #B9BBBE;
+            text-decoration: none;
+            font-size: 0.9em;
+        }
+
+        .footer a:hover {
+            color: #FFF;
+        }
+    </style>
+</head>
+<body>
+    <div class="sidebar">
+        <div class="profile-section">
+            <img src="avatar.png" alt="Avatar" class="avatar">
+            <div class="username">
+                <span>Megamiy</span>
+                <span class="tag">#2302</span>
+            </div>
+            <div class="status-icons">
+                <span class="status-dot"></span>
+                <span class="settings-icon">⚙️</span>
+            </div>
+        </div>
+
+        <div class="menu">
+            <a href="#">Definir status</a>
+            <a href="#">Conta</a>
+            <a href="#">Perfis</a>
+            <a href="#">Privacidade e segurança</a>
+            <a href="#">Aplicativos autorizados</a>
+            <a href="#">Dispositivos</a>
+            <a href="#">Conexões</a>
+            <a href="#">Pedidos de amizade</a>
+            <a href="#">Clipes</a>
+            <a href="#">Escanear o códigos QR</a>
+        </div>
+
+        <!-- Parte inferior da sidebar -->
+        <div class="footer">
+            <a href="#">Configurações de cobrança</a>
+            <a href="cadastro.html">Cadastrar</a> <!-- Botão de cadastrar -->
+        </div>
+    </div>
+</body>
+</html>
